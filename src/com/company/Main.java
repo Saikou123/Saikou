@@ -519,13 +519,139 @@ String Methods:
   //String result = name.toUpperCase();
   //String result = name.toLowerCase();
   //String result = name.trim(); remove empty space
-  //String result = name.replace('o', 'a');
+  //String result = name.replace('o', 'a'); replace o with a
    
   //System.out.println(result);
  }
  
 }
- */
+
+Wrapper classes   // wrapper class =  provides a way to use primitive data types as reference data types
+  //     reference data types contain useful methods
+  //     can be used with collections (ex.ArrayList)
+  
+  //primitive  //wrapper
+  //---------  //-------
+  // boolean  Boolean
+  // char   Character
+  // int   Integer
+  // double  Double
+  
+  // autoboxing = the automatic conversion that the Java compiler makes between the primitive types and their corresponding object wrapper classes
+  // unboxing = the reverse of autoboxing. Automatic conversion of wrapper class to primitive
+  
+  Boolean a = true;
+  Character b = '@';
+  Integer c = 123;
+  Double d = 3.14;
+  by referencing you have acces to methods 
+  primitive a lot faster than reference
+ }
+ 
+}
+Arrays list	// ArrayList = 	a resizable array. 
+		//Elements can be added and removed after compilation phase
+		//store only reference data types
+		
+		ArrayList<String> food = new ArrayList<String>();
+		
+		food.add("pizza");
+		food.add("hamburger");
+		food.add("hotdog");
+		
+		//food.set(0, "sushi");  set a value at a certain index
+		//food.remove(2);
+		//food.clear();
+		
+		for(int i=0; i<food.size(); i++) { you use size and not .lenght
+			System.out.println(food.get(i)); use ge function
+		}
+	}
+}
+
+2D arrays list 
+	ArrayList<ArrayList<String>> groceryList = new ArrayList();
+		
+		ArrayList<String> bakeryList = new ArrayList();
+		bakeryList.add("pasta");
+		bakeryList.add("garlic bread");
+		bakeryList.add("donuts");
+		
+		ArrayList<String> produceList = new ArrayList();
+		produceList.add("tomatoes");
+		produceList.add("zucchini");
+		produceList.add("peppers");
+		
+		ArrayList<String> drinksList = new ArrayList();
+		drinksList.add("soda");
+		drinksList.add("coffee");
+		
+		groceryList.add(bakeryList);
+		groceryList.add(produceList);
+		groceryList.add(drinksList);
+		
+		System.out.println(groceryList);
+		sout(groceryList.get0) print first array list
+		
+	}
+}
+FOR EACH LOOP
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+			
+		// for-each = 	traversing technique to iterate through the elements in an array/collection
+		//				less steps, more readable
+		//				less flexible
+		
+		//String[] animals = {"cat","dog","rat","bird"};
+		ArrayList<String> animals = new ArrayList<String>();
+		
+		animals.add("cat");
+		animals.add("dog");
+		animals.add("rat");
+		animals.add("bird");
+		
+		for(String i : animals) {
+			System.out.println(i);
+		}
+Java methods:
+
+Create own method 
+Void is a return type 
+
+hello(name)
+
+static void hello(String name){
+	System.out.println("Hello"+name )
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// method = a block of code that is executed whenever it is called upon
+		
+		int x = 3;
+		int y = 4;
+		
+		int z = add(x,y);
+
+		System.out.println(z);
+	}
+	
+	static int add(int x, int y) {
+		
+		int z = x + y;
+		return z;
+		
+	}
+	
+}
+
+
+*/
 +++
 
 
