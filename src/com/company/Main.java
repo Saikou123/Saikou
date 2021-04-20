@@ -595,6 +595,7 @@ Arrays list	// ArrayList = 	a resizable array.
 		
 	}
 }
+///
 FOR EACH LOOP
 import java.util.ArrayList;
 
@@ -622,10 +623,10 @@ Java methods:
 Create own method 
 Void is a return type 
 
-hello(name)
+hello(name,age)
 
-static void hello(String name){
-	System.out.println("Hello"+name )
+static void hello(String name,int age){
+	System.out.println("Hello"+name + age  )
 
 public class Main {
 
@@ -649,6 +650,10 @@ public class Main {
 	}
 	
 }
+Overload method:
+
+static int add(int a , int b){
+return a +    b
 
 
 */
