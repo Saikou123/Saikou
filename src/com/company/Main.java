@@ -13,7 +13,7 @@ int i = 5;
 String a = "Alex lee";
 double j = 10*3;
 long b = 1000000000000L;(Long integer)
-float c = 2.5 =2.5000F;
+float c = 2.5 =2.5000F;nj
 
 Boolean in java
 int a = 0;
