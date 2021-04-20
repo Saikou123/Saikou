@@ -7,13 +7,13 @@ String input
 Scanner sc = new Scanner(System.in);(We gonna get input from user with the scanner)
 System.out.println("Enter you're favorite pokemon: "
 String pokemon = sc.nextLine
-
+ 
 Int variable(Cant be a big number)
 int i = 5;
 String a = "Alex lee";
 double j = 10*3;
 long b = 1000000000000L;(Long integer)
-float c = 2.5 =2.5000F;nj
+float c = 2.5 =2.5000F;
 
 Boolean in java
 int a = 0;
@@ -46,6 +46,48 @@ if(n >=90 && n<=100){
       System.out.println("You got an C)
       }else(It means everything else){
       System.out.println("The number is not in range");
+ Exemple of code:
+ public static void main(String[] args) {
+		
+		// if statement = performs a block of code if it's condition evaluates to be true
+                else been if it's false
+                If is also prioritize over else if
+		
+		int age = 75;
+		
+		if(age==75) {
+			System.out.println("Ok Boomer!");
+		}
+		else if(age>=18) {
+			System.out.println("You are an adult!");
+		}
+		else if(age>=13) {
+			System.out.println("You are a teenager!");
+		}
+		else {
+			System.out.println("You are not an adult!");
+		}
+      
+      
+ 
+
+GIU 
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		String name = JOptionPane.showInputDialog("Enter your name");
+		JOptionPane.showMessageDialog(null, "Hello "+name);
+		
+		int age = Integer.parseInt(JOptionPane.showInputDialog("Enter your age"));
+		JOptionPane.showMessageDialog(null, "You are "+age+" years old");
+		
+		double height = Double.parseDouble(JOptionPane.showInputDialog("Enter your height"));
+		JOptionPane.showMessageDialog(null, "You are "+height+" cm tall");
+	}	
+}
 
  Comparison operator
     int a = 5
@@ -111,7 +153,7 @@ System.out.println(backpack[2]);(Outprit will be sniper)
 String into Int
 String s = "102";
 Integer.parseInt(s)(Me(this methode turn the stings number into integer)
-ççString s = "age:47";(if you wanna turn the string into an integer without the age:0
+ String s = "age:47";(if you wanna turn the string into an integer without the age:0
 s = s.replaceALL("\\D+","")
 
 System.out.println(n+2);
@@ -211,10 +253,224 @@ String[]name = x.split(",");(use to separte arrays )
 
 
 /*
+
+Note 12 H
+
 Compiling code = transform source code to machine code
 by code cross-plateform JVM
 Class collection of related code
 if you wanna replace something you go on edit find replace :::_)__
+
+Math class:
+Math.max(x,y) max of both
+Math.min(x,y) min of both
+Math.abs(y) absolute
+Math.sqrt(x) sqrt of
+Math.round(x) round (arondir)
+Math.ceil(x) round up alway
+Math.floor(x)
+
+//*********************************************
+import java.util.Scanner;
+
+public class Main {
+
+ public static void main(String[] args) {
+  
+  double x;
+  double y;
+  double z;
+  
+  Scanner scanner = new Scanner(System.in);
+    
+  System.out.println("Enter side x: ");
+  x = scanner.nextDouble();
+  System.out.println("Enter side y: ");
+  y = scanner.nextDouble();
+  
+  z = Math.sqrt((x*x)+(y*y));
+  
+  System.out.println("The hypotenuse is : "+z);
+  
+  scanner.close();   
+ }
+}
+
+Java random number generator: 
+
+random.nextInt()
+random.nextDouble()
+random.nextBoolean()
+
+import java.util.Random;
+
+public class Main {
+
+ public static void main(String[] args) {
+  
+  Random random = new Random();
+  
+  int x = random.nextInt(6)+1    (6) is a random beetween 0-5 the +1 equal 0-6
+  //double y = random.nextDouble();
+  //boolean z = random.nextBoolean();
+  
+  System.out.println(x);
+    
+ }
+}
+Switch statement: it means if it match then you right it 
+public class Main {
+
+ public static void main(String[] args) {
+  
+  // switch = statement that allows a variable to be tested for equality against a list of values
+  break stop from writting everything
+  default is use so that if you nothing match then it will write the default
+  
+  String day = "Friday";
+  
+  switch(day) {
+   case "Sunday": System.out.println("It is Sunday!");
+   break;
+   case "Monday": System.out.println("It is Monday!");
+   break;
+   case "Tuesday": System.out.println("It is Tuesday!");
+   break;
+   case "Wednesday": System.out.println("It is Wednesday!");
+   break;
+   case "Thursday": System.out.println("It is Thursday!");
+   break;
+   case "Friday": System.out.println("It is Friday!");
+   break;
+   case "Saturday": System.out.println("It is Saturday!");
+   break;
+   default: System.out.println("That is not a day!");
+  }
+    
+ }
+}
+
+LOGICAL OPERATOR:public class Main {
+
+	public static void main(String[] args) {
+		
+		// logical operators = used to connect two or more expressions
+		//
+		//						&& = (AND) both conditions must be true
+		// 						|| = (OR) either condition must be true
+		//						! = (NOT) reverses boolean value of condition
+
+// -------------------------------- Example 1 --------------------------------
+/*
+		int temp = 15;
+		
+		if(temp>30) {
+			System.out.println("It is hot outside");
+		}
+		else if(temp>=20 && temp<=30) {
+			System.out.println("It is warm outside");
+		}
+		else {
+			System.out.println("It is cold outside");
+		}
+
+*/
+// -------------------------------- Example 2 --------------------------------
+/*
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("You are playing a game! Press q or Q to quit");
+		String response = scanner.next();
+		
+		if(!response.equals("q") && !response.equals("Q")) { //equals method
+			System.out.println("YOu are still playing the game *pew pew*");
+		}
+		else {
+			System.out.println("You quit the game");
+		}
+
+
+	}
+            
+}
+WHILE LOOPS:(DO loops means you do this once then check condition compare to while loops they check condition first
+
+import java.util.Scanner;
+
+public class Main {
+
+ public static void main(String[] args) {
+  
+  // while loop = executes a block of code as long as a it's condition remains true
+
+  Scanner scanner = new Scanner(System.in);
+  String name = "";
+  
+  while(name.isBlank()) {
+   System.out.print("Enter your name: ");
+   name = scanner.nextLine();
+  }
+  
+  System.out.println("Hello "+name);
+   
+ }
+}
+FOR LOOP:
+public static void main(String[] args) {
+		
+		// for loop = executes a block of code a limited amount of times
+		
+		for(int i=10; i>=0; i--) {
+			System.out.println(i);
+		}
+		System.out.println("Happy new year!");
+		
+	}
+}
+NESTED FOR LOOPS:
+ublic static void main(String[] args) {
+		
+		// nested loops = a loop inside of a loop
+		
+		Scanner scanner = new Scanner(System.in);
+		int rows;
+		int columns;
+		String symbol = "";
+		
+		System.out.println("Enter # of rows: ");
+		rows = scanner.nextInt();
+		System.out.println("Enter # of columns: ");
+		columns = scanner.nextInt();
+		System.out.println("Enter symbol to use: ");
+		symbol = scanner.next();
+		
+		for(int i=1; i<=rows; i++) {
+			System.out.println();
+			for(int j=1; j<=columns;j++) {
+				System.out.print(symbol);
+			}
+		}	
+	}
+}
+
+ARRAYS:
+
+// array = used to store multiple values within a single variable
+		
+		String[] cars = new String[3];
+		
+		cars[0] = "Camaro";
+		cars[1] = "Corvette";
+		cars[2] = "Tesla";
+			
+		for(int i=0; i<cars.length; i++) {
+			System.out.println(cars[i]);
+		}
+	
+	}
+}
+
+
  */
 +++
 
@@ -225,6 +481,6 @@ if you wanna replace something you go on edit find replace :::_)__
 
 
 
+
 /*
 //Note video de 12 h
-
