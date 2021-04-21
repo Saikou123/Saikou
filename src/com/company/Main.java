@@ -650,10 +650,187 @@ public class Main {
 	}
 	
 }
-Overload method:
+// overloaded methods = methods that share the same name but have different parameters
+		//						method name + parameters = method signature
+		
+		double x = add(1.0,2.0,3.0,4.0);
+		
+		System.out.println(x);
+		
+	}
+	
+	static int add(int a, int b) {
+		System.out.println("This is overloaded method #1");
+		return a + b;
+	}
+	static int add(int a, int b, int c) {
+		System.out.println("This is overloaded method #2");
+		return a + b + c;
+	}
+	static int add(int a, int b, int c, int d) {
+		System.out.println("This is overloaded method #3");
+		return a + b + c + d;
+	}
+	static double add(double a, double b) {
+		System.out.println("This is overloaded method #4");
+		return a + b;
+	}
+	static double add(double a, double b, double c) {
+		System.out.println("This is overloaded method #5");
+		return a + b + c;
+	}
+	static double add(double a, double b, double c, double d) {
+		System.out.println("This is overloaded method #6");
+		return a + b + c + d;
+	}	
+}
+Print f methode:
+		// printf() = 	an optional method to control, format, and display text to the console window
+		//				two arguments = format string + (object/variable/value)
+		//				% [flags] [precision] [width] [conversion-character]
+				
+		boolean myBoolean = true;
+		char myChar = '@';
+		String myString = "Bro";
+		int myInt = 50;
+		double myDouble = 1000;
+			
+		// [conversion-character]
+		//System.out.printf("%b",myBoolean);
+		//System.out.printf("%c",myChar);
+		//System.out.printf("%s",myString);
+		//System.out.printf("%d",myInt);
+		//System.out.printf("%f",myDouble);
+		
+		//[width]
+		// minimum number of characters to be written as output
+		//System.out.printf("Hello %10s",myString);
+		
+		//[precision]
+		// sets number of digits of precision when outputting floating-point values
+		//System.out.printf("You have this much money %.1f",myDouble);
+		
+		// [flags]
+		// adds an effect to output based on the flag added to format specifier
+		// - : left-justify
+		// + : output a plus ( + ) or minus ( - ) sign for a numeric value
+		// 0 : numeric values are zero-padded
+		// , : comma grouping separator if numbers > 1000
+		
+		//System.out.printf("You have this much money %,f",myDouble);
 
-static int add(int a , int b){
-return a +    b
+
+Java OOP objects:
+
+//*******************************************
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Car myCar1 = new Car();      new is used to give all the other class atribute
+		Car myCar2 = new Car();
+
+		System.out.println(myCar1.make);
+		System.out.println(myCar1.model);
+
+		myCar1.drive();
+		myCar1.brake();
+	}
+}
+//*******************************************
+public class Car {
+
+	String make = "Chevrolet";  
+	String model = "Corvette";
+	int year = 2020;
+	String color = "blue";
+	double price = 50000.00;
+	
+	void drive() {
+		System.out.println("You drive the car");
+	}
+	void brake() {
+		System.out.println("You step on the brakes");
+	}	
+}
+Constroctors:
+
+//******************************************************
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Human human1 = new Human("Rick",65,70);
+		Human human2 = new Human("Morty",16,50);
+			
+		human1.drink();
+		human2.eat();
+		
+	}
+}
+//******************************************************
+public class Human {
+
+	String name;
+	int age;
+	double weight;
+	
+	Human(String name,int age,double weight){
+		
+		this.name = name;
+		this.age = age;
+		this.weight = weight;
+	}
+	
+	void eat() {
+		System.out.println(this.name+" is eating");
+	}
+	void drink() {
+		System.out.println(this.name+" is drinking *burp*");
+	}
+		
+}
+//******************************************************
+//*******************************************
+Variable scope:
+
+//********************************************
+public class Main {
+
+ public static void main(String[] args) {
+  
+  //local =  declared inside a method
+  //   visible only to that method
+  
+  //global  = declared outside a method, but within a class
+  //   visible to all parts of a class
+  
+  DiceRoller diceRoller = new DiceRoller();
+  
+ }
+}
+//********************************************
+import java.util.Random;
+
+public class DiceRoller {
+ 
+ Random random;
+ int number;
+ 
+ DiceRoller(){
+  random = new Random();
+  roll();
+ }
+ 
+ void roll() {
+  number = random.nextInt(6)+1;
+  System.out.println(number);
+ }
+}
+//********************************************
+		
+		
+		
 
 
 */
